@@ -57,8 +57,8 @@
 // |       |     |     |      |      |      |       |   |       |      |  INS  |  end  | PG_DN|       |       |
 //               |     |      |      |      |       |   |       |      |       |       |      |
             bindings = <
-&trans    &trans    &trans    &trans      &trans    &trans                    &trans    &trans   &trans    &trans       &kp MINUS &kp EQUAL
-&trans    &trans    &trans    &trans      &trans    &trans                    &trans    &trans   &kp BKSPC &kp ENTER    &kp LEFT_BRACKET    &kp RIGHT_BRACKET
+&trans    &trans    &trans    &trans      &trans    &trans                    &trans    &trans   &trans    &trans       &kp MINUS   &kp EQUAL
+&trans    &trans    &trans    &trans      &trans    &trans                    &trans    &trans   &kp BKSPC  &kp ENTER    &kp LBKT    &kp RBKT
 &trans    &trans    &trans    &trans      &trans    &trans                    &trans    &kp DEL  &kp Home  &kp PG_UP    &trans    &trans    
 &trans    &trans    &trans    &trans      &trans    &trans  &trans   &trans   &trans    &kp INS  &kp end   &kp PG_DN    &trans    &trans    
                     &trans    &trans      &trans    &trans  &trans   &trans   &trans    &trans   &trans    &trans 
