@@ -51,13 +51,13 @@
 
         raise_layer {
 // ------------------------------------------------------------------------------------------------------------
-// |       |     |     |      |      |      |                   |   6  |    7  |   8   |  9   | MINUS | EQUAL |
+// |BTCLR| BT1  | BT2  |  BT3  |  BT4  |  BT5 |                    |   6  |    7  |   8   |  9   | MINUS | EQUAL |
 // |       |     |     |      |      |      |                   |      |       | BKSPC | ENTER|LEFT_BRACKET|RIGHT_BRACKET|
 // |       |     |     |      |      |      |                   |      |  DEL  |  Home | PG_UP|       |       |
 // |       |     |     |      |      |      |       |   |       |      |  INS  |  end  | PG_DN|       |       |
 //               |     |      |      |      |       |   |       |      |       |       |      |
             bindings = <
-&trans    &trans    &trans    &trans      &trans    &trans                    &trans    &trans   &trans    &trans       &kp MINUS   &kp EQUAL
+&bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4                     &trans    &trans   &trans    &trans       &kp MINUS   &kp EQUAL
 &trans    &trans    &trans    &trans      &trans    &trans                    &trans    &trans   &kp BSPC  &kp ENTER    &kp LBKT    &kp RBKT
 &trans    &trans    &trans    &trans      &trans    &trans                    &trans    &kp DEL  &kp HOME  &kp PG_UP    &trans    &trans    
 &trans    &trans    &trans    &trans      &trans    &trans  &trans   &trans   &trans    &kp INS  &kp END   &kp PG_DN    &trans    &trans    
