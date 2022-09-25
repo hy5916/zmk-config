@@ -9,6 +9,7 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/rgb.h>
 #include <dt-bindings/led/led.h>
+#include <dt-bindings/zmk/ext_power.h>
 
 / {
     keymap {
@@ -53,13 +54,13 @@
 
         raise_layer {
 // ------------------------------------------------------------------------------------------------------------
-// |BTCLR| BT1  | BT2  |  BT3  |  BT4  |  BT5 |                    |   6  |    7  |   8   |  9   | MINUS | EQUAL |
+// |BTCLR| BT1  | BT2  |  BT3  |  BT4  |  BT5 |                    |EXT_POWER_TOGGLE_CMD|    7  |   8   |  9   | MINUS | EQUAL |
 // |RGB_TOG|RGB_SPI|RGB_HUI|RGB_SAI|RGB_BRI|RGB_EFF|                   |      |       | BKSPC | ENTER|LEFT_BRACKET|RIGHT_BRACKET|
 // |       |RGB_SPD|RGB_HUD|RGB_SAD|RGB_BRD|RGB_EFR|                   |      |  DEL  |  Home | PG_UP|       |       |
 // |     |     |     |      |      |      |       |   |       |      |  INS  |  end  | PG_DN|       |       |
 //             |     |      |      |      |       |   |       |      |       |       |      |
             bindings = <
-&bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4                     &trans    &trans   &trans    &trans       &kp MINUS   &kp EQUAL
+&bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4                     &ext_power EP_TOG    &trans   &trans    &trans       &kp MINUS   &kp EQUAL
 &rgb_ug RGB_TOG &rgb_ug RGB_SPI &rgb_ug RGB_HUI &rgb_ug RGB_SAI &rgb_ug RGB_BRI &rgb_ug RGB_EFF                   &trans    &trans   &kp BSPC  &kp ENTER    &kp LBKT    &kp RBKT
 &trans    &rgb_ug RGB_SPD &rgb_ug RGB_HUD &rgb_ug RGB_SAD &rgb_ug RGB_BRD &rgb_ug RGB_EFR                &trans    &kp DEL  &kp HOME  &kp PG_UP    &trans    &trans    
 &trans    &trans    &trans    &trans      &trans    &trans  &trans   &trans   &trans    &kp INS  &kp END   &kp PG_DN    &trans    &trans    
@@ -96,4 +97,10 @@
                           LED_COLOR_ID_RED
                           LED_COLOR_ID_BLUE>;
   };
+};
+
+/ {
+	chosen {
+		zmk,underglow = &led_strip;
+	};
 };
