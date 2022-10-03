@@ -43,7 +43,7 @@
 //               |     |      |      |      |       |   |       |      |       |       |      |      
             bindings = <
 &kp GRAVE &kp F1    &kp F2    &kp F3      &kp F4    &kp F5                    &kp F6    &kp F7   &kp F8    &kp F9    &kp F10   &kp F11
-&trans    &trans    &trans    &kp UP      &trans    &trans                    &trans    &trans   &trans    &trans    &trans    &trans
+&rgb_ug RGB_TOG  &trans    &trans    &kp UP      &trans    &trans                    &trans    &trans   &trans    &trans    &trans    &trans
 &trans    &trans    &kp LEFT  &kp DOWN    &kp RIGHT &trans                    &trans    &trans   &trans    &trans    &trans    &trans
 &trans    &trans    &trans    &trans      &trans    &trans  &trans   &trans   &trans    &trans   &trans    &trans    &trans    &trans
                     &trans    &trans      &trans    &trans  &trans   &trans   &trans    &trans   &trans    &trans    
@@ -90,7 +90,7 @@
     spi-max-frequency = <4000000>;
 
     /* WS2812 */
-    chain-length = <30>; /* number of LEDs */
+    chain-length = <5>; /* number of LEDs */
     spi-one-frame = <0x70>;
     spi-zero-frame = <0x40>;
     color-mapping = <LED_COLOR_ID_GREEN
